@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+
+* { margin: 0px;
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: 25%;
+  padding: 0px;
+  width: 70px;
+  height: 100px;
+  padding: 0px;
+  border: 1px solid rgb(227, 227, 243);
+}
+
+
+
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+
+</script>
+</head>
+<body>
+
+
+
+<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
+<div class="initialcards">
+<img id="drag0" class="box" src="{{ card_path[0] }}" draggable="true" ondragstart="drag(event)" >
+<img id="drag1" class="box" src="{{ card_path[1] }}" draggable="true" ondragstart="drag(event)" >
+<img id="drag2" class="box" src="{{ card_path[2] }}" draggable="true" ondragstart="drag(event)" >
+<img id="drag3" class="box" src="{{ card_path[3] }}" draggable="true" ondragstart="drag(event)" >
+<img id="drag4" class="box" src="{{ card_path[4] }}" draggable="true" ondragstart="drag(event)" >
+</div> 
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+}
+
+/* size of the app */
+.app {
+ 	display: flex;
+	flex-flow: row wrap;
+	width: 800px;
+	height: 766px;
+	border-style: solid
+
+    /*background-color: rgba(0, 255, 98, 0.233); /*works*/
+}
+
+/*header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 0px;
+}*/
+
+/* .hands is number of rows */
+
+.init-list{
+    flex: wrap;
+    width: 790px;
+    min-height: 190px;
+    border-style: double;
+}
+
+/*.hands {
+	flex: 1;
+	flex-flow: row wrap;
+	width: 790px;
+    height: 220px;
+    *//*top: 100px;*//*
+    *//*background-color: antique-white*//*
+}*/
+
+
+/* .hands .list is the actual row */
+.hands .list {
+	display: grid;
+ 	display:flex;
+	flex-wrap: wrap;
+	flex: 1;
+
+	/* width: 787px; /* Cards wrapping */
+	height: 95px;
+	background-color: rgba(0,0,0,.1);
+	margin: 0px 0px;
+	padding: 0px;
+	transition: all 0.2s linear;
+    border-style: ridge;
+}
+
+/* list-item is the card */
+.hands .list .list-item {
+ 	background-color: rgba(0,0,0,.1);
+	border-width: 0px;
+	border-style: double;
+	border-color: none;
+	flex-wrap: wrap;
+}
+
+h6{ font-size: xx-small;
+}
+
+#hand6{
+	width: 600px;
+	margin-left: 75px;
+}
+
+#hand5 {
+	width: 518px;
+	margin-left: 75px;
+}
+
+#hand4 {
+	width: 413px;
+	margin-left: 140px;
+}
+
+#hand3 {
+	width: 338px;
+	margin-left: 140px;
+}
+
+#hand2 {
+	width: 338px;
+	margin-left: 140px;
+}
+
+#hand1{
+	width: 93px;
+	margin-left: 200px;
+
+}
+
+img{
+    /*border-radius: 10px;*/
+    /*border-style: ridge;*/
+    /*border-color: black;*/
+}
+
+img:hover{
+	border-style: solid;
+	border-width: 1px;
+}
+
+button{
+	background-color: aqua;
+	border-radius: 8px;
+	width: 100px;
+	height: 60px;
+	margin: 20px;
+	cursor: pointer;
+}
+
+button:hover{
+	background-color: rgb(128, 212, 212);
+
+}
