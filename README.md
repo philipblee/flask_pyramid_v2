@@ -1,7 +1,6 @@
 # flask_pyramid_v2
-Beta version of Pyramid Poker built on Python's Flask Web-based Framework
-
-Click on Canvas Button to begin
-Then click the 25 Cards button to begin
-Next, drag between 20-25 cards onto the Canvas according to Pyramid
-Poker Rules
+After running app.py, you must open 127.0.0.1:5000 to view website
+Website shows 20 Cards Pyramid Poker Hand
+Player must click "Show Kitty" button to see 5 more cards
+Player then sets up 6 Pyramid Poker Hands according to rules
+After playing hand, Player clicks "New Hand" button
