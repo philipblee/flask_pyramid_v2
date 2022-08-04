@@ -1,55 +1,37 @@
 from Deck import *
 from flask import Flask, render_template
 from sort_cards import *
+import win32api
 
 app = Flask(__name__)
 
+def show_next_hand(*args):
+    """ Create the card list use Deck().deal and display_cardlist them"""
+    global twentyfive_cards
+    twentyfive_cards = Deck.deal()
+
 @app.route('/')
 def index():
-    return render_template("index.html")
-
-@app.route('/drag2')
-def drag2():
-    card_list = Deck.deal()[0]
-    card_list = sorted(card_list, key=rank_sort, reverse=True)
-    card_list = []
+    show_next_hand()
+    global twentyfive_cards
+    twenty_cards = (sorted(twentyfive_cards[0][0:20], key=rank_sort, reverse=True))
+    kitty_cards = (sorted(twentyfive_cards[0][20:25], key=rank_sort, reverse=True))
+    twentyfive_cards = twenty_cards + kitty_cards
+    print (twentyfive_cards)
     card_path = []
-    for card in card_list:
+    for card in twentyfive_cards:
         card_path.append("static/Cards_gif/" + card[0:2] + ".gif")
-    card_path = []
-    return render_template("drag2.html", card_list=card_list, card_path=card_path)
+
+    win32api.MessageBox(0, 'You just dealt a Pyramid Poker hand!', 'Running a Python Script via Javascript', 0x00001000)
+    return render_template("deal20.html", card_list=twentyfive_cards, card_path=card_path)
 
 @app.route('/deal25')
 def deal25():
-    card_list = Deck.deal()[0]
-    card_list = sorted(card_list, key=rank_sort, reverse=True)
-    print(card_list)
+    global twentyfive_cards
     card_path = []
-    for card in card_list:
+    for card in twentyfive_cards:
         card_path.append("static/Cards_gif/" + card[0:2] + ".gif")
-    return render_template("drag2.html", card_list=card_list, card_path=card_path)
-
-
-@app.route('/deal20')
-def deal20():
-    card_list = Deck.deal()[0][0:20]
-    card_list = sorted(card_list, key=rank_sort, reverse=True)
-    print(card_list)
-    card_path = []
-    for card in card_list:
-        card_path.append("static/Cards_gif/" + card[0:2] + ".gif")
-    return render_template("drag2.html", card_list=card_list, card_path=card_path)
-
-@app.route('/deal')
-def deal():
-    card_list = Deck.deal()[0]
-    card_list = sorted(card_list, key=rank_sort, reverse=True)
-    print(card_list)
-    card_path = []
-    for card in card_list:
-        card_path.append("static/Cards_gif/" + card[0:2] + ".gif")
-
-    return render_template("deal.html", card_list=card_list, card_path=card_path)
+    return render_template("deal25.html", card_list=twentyfive_cards, card_path=card_path)
 
 if __name__ == '__main__':
     app.run(debug=True)

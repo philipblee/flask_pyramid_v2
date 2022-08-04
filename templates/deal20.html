@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Pyramid Poker V2</title>
+	<title>deal20.html</title>
 	<link rel="stylesheet" href="static/drag2.css"/>
 </head>
 <body>
@@ -14,7 +14,7 @@
 		<div class="hands">
 			<div class="list init-list">
 
-				{% for path in card_path[0:25] %}
+				{% for path in card_path[0:20] %}
 
 					<div class="list-item" draggable="true"><img src= {{ path }} alt={{ path }} width="60" height="90"></div>
 
@@ -36,10 +36,8 @@
 
 		<script src="static/js/drag2.js"></script>
 
-	<a href="/drag2"> <button>Canvas</button></a>
-	<a href="/deal20"> <button>20 Cards</button></a>
-	<a href="/deal25"> <button>25 Cards</button></a>
-	<a href="/"> <button>Home</button></a>
+	<a href="/deal25"> <button>Show Kitty</button></a>
+	<a href="/"> <button>New Hand</button></a>
 
 	</div>
 </div>

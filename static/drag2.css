@@ -16,7 +16,7 @@ body {
 	height: 766px;
 	border-style: solid
 
-    /*background-color: rgba(0, 255, 98, 0.233); /*works*/
+  /*background-color: rgba(0, 255, 98, 0.233); /*works*/
 }
 
 /*header {
@@ -27,10 +27,9 @@ body {
 }*/
 
 /* .hands is number of rows */
-
 .init-list{
     flex: wrap;
-    width: 790px;
+    max-width: 790px;
     min-height: 190px;
     border-style: double;
 }
@@ -39,9 +38,7 @@ body {
 	flex: 1;
 	flex-flow: row wrap;
 	width: 790px;
-    height: 220px;
-    *//*top: 100px;*//*
-    *//*background-color: antique-white*//*
+  height: 220px;
 }*/
 
 
@@ -85,34 +82,39 @@ h6{ font-size: xx-small;
 
 #hand4 {
 	width: 413px;
-	margin-left: 140px;
+	margin-left: 75px;
 }
 
 #hand3 {
 	width: 338px;
-	margin-left: 140px;
+	margin-left: 75px;
 }
 
 #hand2 {
 	width: 338px;
-	margin-left: 140px;
+	margin-left: 75px;
 }
 
 #hand1{
 	width: 93px;
-	margin-left: 200px;
+	margin-left: 140px;
 
 }
 
 img{
-    /*border-radius: 10px;*/
+    border-radius: 10px;
     /*border-style: ridge;*/
-    /*border-color: black;*/
+    border-color: black;
+		transition: box-shadow 1s ;
 }
 
 img:hover{
 	border-style: solid;
 	border-width: 1px;
+}
+
+img:active{
+	border: none;
 }
 
 button{

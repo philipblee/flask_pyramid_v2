@@ -1,22 +1,57 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home Page</title>
+    <title>Index.html</title>
     <link rel="stylesheet" href="static/drag2.css"/>
 </head>
-
 <body>
-<h1>This is the Pyramid Poker Home Page</h1>
 
-
-
-
-<br>
-<br>
-<br>
-<a href="/"> <button>Home</button></a>
-<a href="/drag2"> <button>Canvas</button></a>
-<a href="/example"> <button>Example</button></a>
 </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Home Page</title>
+</head>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+<! -- This script runs the python script on the page load -->
+<script>
+    function myfunction_onload(){
+        $.ajax({
+            url: "app.py",
+             context: document.body
+            })
+        }
+    </script>
+
+<! -- This script runs the python script when the button is clicked -->
+<script>
+    function myfunction_clickevent(){
+        $.ajax({
+            url:"/shuffle",
+            context: document.body});}
+</script>
+<body>
+<! -- Calls a function on the page load. -- >
+    <element onload="myfunction_onload">
+    <button type="submit" onclick='myfunction_clickevent()'>Run my Python!</button>
+    <br>
+    <br>
+    <br>
+    <a href="/"> <button>New Hand</button></a>
+    <a href="/deal20"> <button>Deal 20</button></a>
+</body>
+
+</html>
+
+
+
+
 
