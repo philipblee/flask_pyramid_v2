@@ -1,7 +1,7 @@
 from Deck import *
 from flask import Flask, render_template
 from sort_cards import *
-import win32api
+
 
 app = Flask(__name__)
 
@@ -21,8 +21,7 @@ def index():
     card_path = []
     for card in twentyfive_cards:
         card_path.append("static/Cards_gif/" + card[0:2] + ".gif")
-
-    win32api.MessageBox(0, 'You just dealt a Pyramid Poker hand!', 'Running a Python Script via Javascript', 0x00001000)
+    # win32api.MessageBox(0, 'You just dealt a Pyramid Poker hand!', 'Running a Python Script via Javascript', 0x00001000)
     return render_template("deal20.html", card_list=twentyfive_cards, card_path=card_path)
 
 @app.route('/deal25')
