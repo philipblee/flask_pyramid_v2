@@ -12,34 +12,20 @@ body {
 .app {
  	display: flex;
 	flex-flow: row wrap;
-	width: 800px;
+	width: 700px;
 	height: 766px;
 	border-style: solid
 
   /*background-color: rgba(0, 255, 98, 0.233); /*works*/
 }
 
-/*header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 0px;
-}*/
-
 /* .hands is number of rows */
 .init-list{
     flex: wrap;
-    max-width: 790px;
+    max-width: 700px;
     min-height: 190px;
     border-style: double;
 }
-
-/*.hands {
-	flex: 1;
-	flex-flow: row wrap;
-	width: 790px;
-  height: 220px;
-}*/
 
 
 /* .hands .list is the actual row */
@@ -71,33 +57,33 @@ h6{ font-size: xx-small;
 }
 
 #hand6{
-	width: 600px;
-	margin-left: 75px;
+	width: 520px;
+	margin-left: 175px;
 }
 
 #hand5 {
 	width: 518px;
-	margin-left: 75px;
+	margin-left: 175px;
 }
 
 #hand4 {
 	width: 413px;
-	margin-left: 75px;
+	margin-left: 175px;
 }
 
 #hand3 {
 	width: 338px;
-	margin-left: 75px;
+	margin-left: 175px;
 }
 
 #hand2 {
 	width: 338px;
-	margin-left: 75px;
+	margin-left: 175px;
 }
 
 #hand1{
 	width: 93px;
-	margin-left: 140px;
+	margin-left: 240px;
 
 }
 
