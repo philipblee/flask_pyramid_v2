@@ -12,7 +12,7 @@ body {
 .app {
  	display: flex;
 	flex-flow: row wrap;
-	width: 700px;
+	width: 800px;
 	height: 766px;
 	border-style: solid
 
@@ -22,7 +22,7 @@ body {
 /* .hands is number of rows */
 .init-list{
     flex: wrap;
-    max-width: 700px;
+    max-width: 800px;
     min-height: 190px;
     border-style: double;
 }
