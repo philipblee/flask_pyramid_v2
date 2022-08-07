@@ -12,6 +12,10 @@ def show_next_hand(*args):
 
 @app.route('/')
 def index():
+    return render_template("index.html")
+
+@app.route('/new_hand')
+def new_hand():
     show_next_hand()
     global twentyfive_cards
     twenty_cards = (sorted(twentyfive_cards[0][0:20], key=rank_sort, reverse=True))

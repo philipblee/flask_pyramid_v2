@@ -16,7 +16,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sample Home Page</title>
+    <title>Pyramid Poker Home Page</title>
 </head>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
@@ -38,15 +38,54 @@
             url:"/shuffle",
             context: document.body});}
 </script>
+<style>
+    p {margin-left: 20px;
+       margin-right: 20px;
+    }
+
+    h1 {margin-left: 20px;
+    }
+
+    li {margin-left: 20px;
+    }
+
+</style>
 <body>
 <! -- Calls a function on the page load. -- >
+
+<h1>Welcome to the Pyramid Poker</h1>
+
+<p>Pyramid Poker is a new variation of poker invented by Philip Lee and Peter Yee.</p>
+<p>Pyramid Poker has many variations. While the game can be adjusted for different
+numbers of players, these are the instructions for the Solitaire Version the game.
+The game requires 3 decks of cards plus 3 jokers to play (159 cards). A joker is a wild
+card and can be played as any card you wish. All 159 cards are shuffled to start the
+play. </p>
+
+    <p>You are initially dealt 20 cards. If you choose to play, 5 more cards will be dealt to you per the following game
+instructions.</p>
+<p>The goal is to arrange at least 20 cards into 6 distinct hands</p>
+<li>
+    1 one-card hand,
+</li>
+<li>
+    3 three card hands,
+</li>
+<li>and 2 five-card hands</li>
+
+<p>Each player will compete with his/her 6 hands.</p>
+<p>Hand 6 must be stronger than Hand 5, which must be stronger than Hand 4, and so on
+and so forth. The value of each hand follows traditional poker rules (e.g., a flush beats a
+straight).</p>
+
+
+
+</p>
     <element onload="myfunction_onload">
-    <button type="submit" onclick='myfunction_clickevent()'>Run my Python!</button>
-    <br>
-    <br>
-    <br>
-    <a href="/"> <button>New Hand</button></a>
-    <a href="/deal20"> <button>Deal 20</button></a>
+<!--    <button type="submit" onclick='myfunction_clickevent()'>Run my Python!</button>-->
+
+    <a href="/new_hand"> <button>New Hand</button></a>
+
 </body>
 
 </html>
